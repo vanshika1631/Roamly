@@ -1,0 +1,26 @@
+# Python
+backend/.venv/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+.env.*
+backend/.env
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.next/
+out/
+
+# Logs
+*.log
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
