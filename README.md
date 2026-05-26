@@ -1,4 +1,4 @@
-# ✈ Roamly (EmotiTrip AI) — Windows Setup Guide
+# ✈ Roamly
 
 Emotionally-aware travel planner. FastAPI · SQLAlchemy · Neon · Groq · React.
 
@@ -153,41 +153,6 @@ You need **3 terminals** open simultaneously:
 | 1 | `uvicorn app.main:app --reload --port 8000` | FastAPI server |
 | 2 | `arq app.worker.WorkerSettings` | Background job worker |
 | 3 | `npm run dev` (in frontend/) | React dev server |
-
----
-
-## Running Tests
-
-```cmd
-cd roamly\backend
-pytest tests/ -v
-```
-
----
-
-## Common Windows Issues
-
-**`source` is not recognized**
-Use `.venv\Scripts\activate` instead of `source .venv/bin/activate`
-
-**`cp` is not recognized**
-Use `copy` instead of `cp`
-
-**Port already in use**
-```cmd
-netstat -ano | findstr :8000
-taskkill /PID <pid> /F
-```
-
-**Conda environment not activating in terminal**
-Run this once:
-```cmd
-conda init cmd.exe
-```
-Then restart your terminal.
-
-**Docker not starting**
-Make sure Docker Desktop is running in the system tray before running `docker-compose up -d`
 
 ---
 
